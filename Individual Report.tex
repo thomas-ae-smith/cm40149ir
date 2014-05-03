@@ -1,0 +1,264 @@
+% THIS IS SIGPROC-SP.TEX - VERSION 3.1
+% WORKS WITH V3.2SP OF ACM_PROC_ARTICLE-SP.CLS
+% APRIL 2009
+%
+% It is an example file showing how to use the 'acm_proc_article-sp.cls' V3.2SP
+% LaTeX2e document class file for Conference Proceedings submissions.
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V3.2SP) *DOES NOT* produce:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) Page numbering
+% ---------------------------------------------------------------------------------------------------------------
+% It is an example which *does* use the .bib file (from which the .bbl file
+% is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission,
+% you need to 'insert'  your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% Questions regarding SIGS should be sent to
+% Adrienne Griscti ---> griscti@acm.org
+%
+% Questions/suggestions regarding the guidelines, .tex and .cls files, etc. to
+% Gerald Murray ---> murray@hq.acm.org
+%
+% For tracking purposes - this is V3.1SP - APRIL 2009
+
+\documentclass{acm_proc_article-sp}
+\usepackage{graphicx}
+\usepackage{tabularx}
+
+
+\begin{document}
+
+\title{Design Factors Influencing the Effectiveness of `Groupware' Support for Collaborators' Joint and Individual Objectives}
+\subtitle{CM40149 Group Report}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{3} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Tom Wrigglesworth\\
+       \affaddr{Centre for Digital Entertainment}\\
+       \email{tadw20@bath.ac.uk}
+% 2nd. author
+\alignauthor
+Siran Wang\\
+       \affaddr{Centre for Digital Entertainment}\\
+       \email{sw785@bath.ac.uk}
+% 3rd. author
+\alignauthor Thomas Smith\\
+       \affaddr{Centre for Digital Entertainment}\\
+       \email{taes22@bath.ac.uk}
+}
+\date{24 March 2014}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+\begin{abstract}
+This paper provides a description of a number of factors that may influence the effectiveness of computer-supported collaborative work (CSCW) groupware systems, presented in light of a brief investigation into the differing features supported by two contemporary groupware systems.
+\end{abstract}
+
+% A category with the (minimum) three required fields
+% \category{H.5.3}{Information Interfaces and Presentation}{Computer supported cooperative work}
+%A category including the fourth, optional field follows...
+% \category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+ % \terms{Design, Experimentation, Human Factors}
+
+\keywords{Groupware, HCI, CSCW} % NOT required for Proceedings
+
+\section{Introduction}
+Virtual collaborative environments allow for users to work together without the need to be collocated. The effectiveness of these environments in collaborative tasks is often affected by the technology and communication channels being used. In this report we will highlight a number of issues that may affect collaborative team work, and present a brief investigation into the differing features provided by two environments that support collaborative working tasks. Using the results of this investigation as a starting-point, we present a discussion of the features that groupware systems should provide in order to facilitate effective collaboration for non-collocated groups.
+
+\section{Background}
+
+Collocated communication is often viewed as a gold standard in communication because it provides rich information for interactions such as context and social cues \cite{olsondistance2000}. When collaborating through computer mediated technologies much of this information is lost or has the potential to be misinterpreted in some way.
+
+There are certain properties of the physical world that support communication between individuals and groups such as the visibility of activities and presence of participants. In digital systems these properties are not always apparent. Consequently, participants are unable to react to social cues and structure their behaviour to the social context  -- which can result in unsatisfactory interactions \cite{ericksonsocial2000}. Socially translucent systems aim to provide more social information so that participants are more aware of the interactions and activities taking place within a digital space. This awareness can help make collaborative systems operate more effectively by affording more coherence to group activities \cite{dinginforming2011}.
+
+Another important factor affecting the effectiveness of collaborative tasks is the existence of common ground between the participants. It is important that all collaborators are aware of and able to maintain shared knowledge and goals in order to facilitate effective group work. There are a number of potential channels whereby information about common ground may be shared and maintained, and the presence of this information can help avoid communication breakdown \cite{monk2003common}.
+
+\section{Approach}
+
+The investigation consisted of two lab-based experiments; One based in a 3D virtual environment called Second Life and the other in the `Google Docs' web-based word processor. The first task involved communication and coordination of information, while the second was largely an idea generation and refinement task \cite{straus1999testing}. The investigation process is reviewed in this section.
+
+\subsection{Task 1: Second Life}
+
+The first CSCW task is a hidden-information experiment in using each participants' incomplete map to make up a complete map, and then adjust the blocks in the game to form the complete map.
+ 
+Initial efforts were directed towards locating teammates and exploring how to use the software. In-game help was used to find how to play this game, and assistance was also provided by the tutor, who explained how to use it. Some essential information, such as team location, was provided in-game via instructions on the wall.
+ 
+The team communicated using in-game chat and adjusted the blocks to form the final map. We used the chat box to describe our incomplete map. Initially, we typed out the blocks' names one by one -- e.g. ``the first block on the first row is grass in my map''. Later, we changed to input all the blocks' names one row at a time -- e.g ``my row is grass-rock-couple-blank''. We identified the different blocks using the in-game properties and ensured they were placed in the correct order. One teammate who was familiar with adjust blocks put the blocks into the right position according to our decisions. Finally we checked whether all blocks in the right position with our own maps, excepting ``blank'' positions.
+
+\subsection{Task 2: Google Docs}
+
+In this experiment, we were asked to write a number of suggestions for Facebook's privacy settings using a Google document.
+ 
+This time we found that it was not convenient to discuss in the chat box, because we needed to write longer sentences, some of which would be used in the final document. We discussed the task and typed into the Google document directly. Sometimes, we had to wait for others to finish typing in order to avoid splitting the focus of the discussion.
+ 
+Some functions in Google doc are good for the group work. Each user has a different colour cursor in the documents, and the cursor flashes at the location where a user is typing. This helps us to know who are there and what are they doing. Once we discovered that some useful sentences were deleted, we used ``history'' to find it out again.
+
+We were asked to guess who our teammates are. Usually, we can guess who is it via cues provided by the avatar, but this time the avatars were not created by ourselves. So they in this instance they did not provide adequate cues. We still got some clues from the typing speed, speech patterns and language ability.
+
+
+
+\section{Results}
+The team completed both tasks, with varying degrees of success. This section notes some salient aspects of the outcome.
+
+\subsection{Task 1: Second Life}
+We finished the task. The blocks were put in the right position. Our approach to accomplish this task is efficient. We finished our work before the time out. The figure \ref{second} is the screen shot of our result in this task.
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.5\textwidth]{second.png}
+\caption{Screenshot of Second Life result\label{second}}
+\end{figure}
+
+\subsection{Task 2: Google Docs}
+We partially completed this task. As the figure \ref{google} shows below, we listed the task requirements and some suggestions for the Facebook privacy system. However, our word-count for the story is over the required limitation of 200 words. So that means we haven't provided our documents in the correct format, and we did not completely finish our task on time. 
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.5\textwidth]{google.png}
+\caption{Screenshot of the Google document\label{google}}
+\end{figure}
+
+The reason why we did not finish it is due to the need for significant discussion of the existing systems, as not all participants were familiar with Facebook's privacy provision. In the absence of face-to-face communication, we spent a lot time to waiting for other teammates to finish expressing opinions and typing.
+
+
+\section{Discussion}
+
+A number of aspects of the two groupware systems we used were relevant to the effectiveness of the tasks we undertook -- as discussed below. The difference in nature of the task affects the functionality required in order to best support successful completion \cite{straus1999testing} -- and not all helpful features of each platform were discovered during the course of each task.
+
+\subsection{Message Persistence}
+
+Text based communication through chat systems creates messages that are persistent; the exchanges can be revisited in the chat log after they have been sent. The advantage of this for collaborative tasks is that previously shared information is always available to participants \cite{halversonwhat2003}. In other channels of communication such as audio, previous utterances are ephemeral; participants must break the current flow of the conversation to repair misunderstandings because information cannot be casually revisited.
+
+Second Life and Google Docs both include chat systems with persistent messages. During Task 2 it was found that the participants preferred to use the actual document to talk about the task instead of the chat box provided. This was most likely due to two reasons: it required more effort to continually switch from writing on the document to writing in the chat box; and it was also more difficult for the participants to relate the comment in the chat box to what it referred to in the document. Writing comments directly next to the section they apply to helped reduce misunderstandings and the effort required to repair them. The disadvantages of using this method are that the content of the document and comments relating to it get mixed up in the same space. One possible solution to this problem, which the participants didn't discover, is the use of annotations that exist alongside the document rather than within it.
+
+\subsection{Negotiation}
+
+The mediating technology that is available to negotiating participants has implications for the way in which they communicate during the negotiation. A text based chat system, such as that used in Second Life and Google Docs, can both help and hinder optimal negotiation and conflict resolution. One such influencing factor is the way in which information is presented; in a specific or condensed format \cite{dongone2012}. A \emph{specific} format refers to a sentence devoted to a single tile and a \emph{condensed} format refers to a sentence devoted to more than one tile. This coding is especially relevant to the Second Life task when tiles are being discussed (see table).
+
+
+
+\begin{tabularx}{0.45\textwidth}{rX}
+\hline \\ [-2ex]
+	\multicolumn{2}{l}{Specific} \\ 
+\hline \\ [-1.5ex]
+	Rob - Team 3: & okay, I've set that up in the corner. \newline Then oil station?\\
+	Toby - Team 3: & oil station to the right of creative building\\
+	Rob - Team 3: & then a blank?\\
+	Toby - Team 3: & yes - then blank\\
+	Toby - Team 3: & the next row starts with grass\\
+	Rob - Team 3: & second row\\
+	Rob - Team 3: & grass far left\\
+	Peter - Team 3: & the rock\\
+	Peter - Team 3: & then rock, after grass\\
+	\\ [-1.5ex]
+\hline \\ [-1.5ex]
+	\multicolumn{2}{l}{Condensed} \\ 
+\hline \\ [-2ex]
+	Rob - Team 3: & Okay, fourth row: blank asian teahouse blank dinner hall\\
+	Peter - Team 3: & my fourth is :rock - asian teahouse - blank - dinner hall\\
+	Toby - Team 3: & my fourth is: rock - asian teashouse - blank -blank
+\end{tabularx}
+
+
+
+
+
+
+At the beginning of the Second Life task the participants referred to tiles in the specific format, one by one, starting in the top left of the map and moving across. By the start of the second row the participants began to use condensed formatting to describe whole rows in one sentence. This approach may be a more convenient way to negotiate where each tile should be placed. It increased the efficiency of the task in terms of time because all the available information for each row becomes visible to the other participants in just one sentence. Decisions could be made quickly by comparing this condensed information.
+
+The problem with using a condensed format for messages is that the quality of the negotiation may decrease. When a specific format is used a single tile becomes the focus of the conversation and so the more information about it is shared. In this task the negotiators have a common goal but in tasks where goals conflict a lower quality negotiation can may result in one side losing out to a greater extent due to the lower level of discussion (ibid).
+
+\subsection{Gaze}
+
+Gaze is an important part of human communication. Collocated interlocutors can use the social cues afforded by gaze to read each other's behaviour as well as signal their own. This is particularly relevant in terms of focus of attention, maintaining roles, turn-taking and signalling attitudes \cite{argyle1976gaze}.
+
+Second Life and Google Docs are both unable communicate the gaze of participants, however, they are able to provide features that help compensate for the loss of it. Second Life shows a line of sight from a avatar's head to the object of their focus. This allows for participants to know that a teammate is active in the task and which object they are actively working on -- however this information may become `stale' as it is only updated by explicit interaction.
+
+Google Docs visualises the attention of participants by assigning each one a coloured cursor. This gives an indication of what they are currently working on and therefore where their attention is focused. Without this visual cue it would be very difficult to tell who was contributing to the different parts of the document.
+
+The coloured cursor would not always be a completely reliable indicator and could be misleading at times because a participant could leave their cursor at one position while they read a different part of the document -- as with the Second Life gaze indicator, above. The document could span multiple pages and so it was not clear which page or section a user was viewing. A solution to this problem could be to give some sort of indication of what part of each contributor is looking at; maybe a coloured frame indicating their current view space.
+
+\subsection{Accountability}
+
+In the Google Docs task, once a participant stopped working on particular part of the document they moved their cursor elsewhere. This meant there was no longer any indication as to who is accountable for each part of the document. The problem of \emph{who wrote what} could potentially be solved by a number of methods; tagging, overlaying or highlighting each edit or section with the participants cursor colour. 
+
+If this information becomes visible it may have consequences for how participants build and edit the document. These coloured markers create associations between the content creators and their content. These associations alone are enough to justify psychological ownership of the content \cite{begganassociation1994}. The perceived psychological ownership of objects can have both positive and negative effects on the owner's and non-owner's behaviour \cite{beggan1992social}. A positive effect of this visibility is that owners feel heightened responsibility for their content and will therefore spend more time and effort improving it and discussing it \cite{thom-santelliwhats2009}. There may also be negative effects: non-owners may be reluctant to edit and adapt (or `violate') the owners' ideas; and owners are more likely to shut down and refuse non-owner contributions relating to their content \cite{thom-santelliwhat2010}. It is possible that the lack of these ownership markers in Google Docs helps to maintain a feeling that the document belongs to the group as a whole.
+
+\subsection{Roles}
+
+People need to cooperate in collaborative work. Because of differing experience, personality, preferences and ability, different roles will emerge, even they are not agreed in advance \cite{barlow2013emergent}. Roles are good for organizing the group work, and appropriate roles assignment or development can improve the work efficiency.
+ 
+In the Second Life experience, a special role emerged. One team member became responsible for controlling the arrangement of blocks. This action increased the speed of the process, and prevents the possibility that two players might attempt to move one block at the same time. This responsibility was not given in advance -- it naturally formed during the experiment. This could cause trouble for bigger groups, as some participants may ignore the existing role. The reason why this role emerged during the process was not only because there were only three people in the game, but also due to differing prior experience with the games rules. So we cannot anticipate what kind of role will be helpful in this situation. According to this discussion, familiarity with the work environment and prior knowledge of appropriate roles will be useful for collaborative work.
+
+\section{Conclusion}
+
+In light of this discussion, we will try to provide some suggestions for the designers of groupware systems. All the suggestions below are dependant in some way on the task or environment, particularly the degree of interdependence between collaborators. Designers should carefully consider factors of the environment such as number of participants, task rules, participants' experience and personality.
+ 
+Clarity and ease of communication is arguably the most important part of collaborative work. So sufficient quality communication space should be provided. Face-to-face is generally described as the most efficient method for communication. However in some cases, not all participants can be collocated. Technological alternatives to traditional communication channels should be considered. Text chat will not efficient when participants require real-time response times or need to type long sentences -- however it is a basic and widely-understood method, and it is good for giving announcements and providing persistent records of communication. 
+
+In many cases, audio and video communication channels also could be considered -- these provide additional non-verbal information such as tone or body language, though this comes at the cost of message persistence and asynchronicity. Common ground may be easier to maintain due to the communication of unconscious notifications that repair is needed, though certain impediments to collaboration (e.g. language barriers or time differences) may be amplified by the switch to real-time communication.
+
+Appropriate system-supported organizational roles could improve the effectiveness of the groupware. Different level of authority could be defined according to different roles in the group work. The existence of a defined team leader could support the decision-making. But other participants (such as listeners) should also should be motivated. Specific task allocation within the system can avoid vagueness of ideas and misunderstandings between participants. 
+
+It is also important to support the development, maintenance and repair of common ground between participants. In collaborative work, a clear target is necessary. The organizer and main participants should have access to sufficient basic knowledge and task description. It is common to see that shared knowledge is updated or supplemented, and so the groupware designer should provide space to share common information and allow corrections and repair during the process.
+
+
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{group}  % sigproc.bib is the name of the Bibliography in this case
+% \appendix
+
+\balancecolumns
+% That's all folks!
+\end{document}
